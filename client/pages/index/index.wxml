@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <view class="userinfo" bindtap="login">
+      <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+      <view>
+        <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</text>
+        <!-- <text class="userinfo-nickname">{{logged ? userInfo.country : ''}}</text> -->
+        <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+      </view>
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{!logged}}">
+      授权登录
+    </button>
+  </view>
+
+  <!-- 显示收藏列表  -->
+
+  
+</view>

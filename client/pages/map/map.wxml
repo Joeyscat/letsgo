@@ -1,0 +1,26 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'Map'}}" />
+
+  <view class="page-body">
+    <view class="page-section page-section-gap map">
+      <map id='map4select' style="width: 100%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" covers="{{covers}}" bindregionchange='regionchange' controls='{{controls}}'>
+      </map>
+    </view>
+    <view class="info">
+      <text>{{address}}\n</text>
+      <text>经度:{{longitude}}</text>
+      <text>纬度:{{latitude}}\n</text>
+      <!-- <text>{{markers}}</text>  -->
+      <!-- <text>{{covers}}</text> -->
+      <button size='mini' bindtap="getLoc">定位</button>
+      <!-- 用户登录之前收藏按钮不可用 -->
+      <button size='mini' bindtap="favorite">收藏</button>
+    </view>
+
+  </view>
+
+  <template is="foot" />
+</view>

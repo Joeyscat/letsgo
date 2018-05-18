@@ -1,0 +1,25 @@
+/* pages/map/map.wxss */
+
+ .info {
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 250rpx;
+  text-align: center;
+} 
+/* @import '../common/index.wxss' */
+.page-head{
+  background-color: white;
+  padding: 25rpx
+}
+.page-foot{
+  /* background-color: black; */
+  /* padding: 25rpx */
+}
